@@ -5,6 +5,7 @@ const Bodies = Matter.Bodies;
 var engine, world;
 var Tower1, Tower2, Tower3, Tower4, Tower5;
 var Main1, Main2;
+var ground;
 function setup() {
   createCanvas(400,400);
 
@@ -19,6 +20,8 @@ function setup() {
 
   Main1 = new Main(75, 75, 150, 150);
   Main2 = new Main(325, 75, 150, 150);
+
+  ground = new Ground(350, 20, 50, 50);
 }
 
 function draw() {
@@ -35,5 +38,7 @@ function draw() {
   Main1.display();
   Main2.display();
 
+  ground.display();
+  
   drawSprites();
 }
